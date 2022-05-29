@@ -1,3 +1,4 @@
+from tkinter import *
 # ---------------------PASSWORD GENERATOR ----------------
 
 
@@ -6,3 +7,11 @@
 
 
 # ---------------------UI SETUP --------------------------
+window = Tk()
+window.title("Password Manager")
+window.config(padx=100, pady=50)
+
+
+
+
+window.mainloop()
