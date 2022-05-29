@@ -21,4 +21,16 @@ web_name = Label()
 web_name.config(text="Website", font=FONT)
 web_name.grid(row=1, column=0)
 
+web_entry = Entry()
+web_entry.config()
+web_entry.grid(row=1, column=1, columnspan=2)
+
+
+
+
+
+
+
+
+
 window.mainloop()
