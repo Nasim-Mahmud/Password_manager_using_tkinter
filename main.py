@@ -16,4 +16,6 @@ lock_image = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=lock_image)
 canvas.grid(row=1, column=1)
 
+# ------------------------FORM------------------------------
+
 window.mainloop()
