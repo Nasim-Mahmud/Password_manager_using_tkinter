@@ -40,15 +40,15 @@ password_name.config(text="Password:", font=FONT)
 password_name.grid(row=3, column=0)
 
 password_entry = Entry()
-password_entry.config(width=33)
+password_entry.config(width=37)
 password_entry.grid(row=3, column=1, pady=5)
 
 password_gen_button = Button()
 password_gen_button.config(text="Generate Password", font=FONT, height=1)
-password_gen_button.grid(row=3, column=2)
+password_gen_button.grid(row=3, column=2,pady=5)
 
 add_button = Button()
-add_button.config(text="Add", font=FONT, height=1, width=38)
+add_button.config(text="Add", font=FONT, height=1, width=43)
 add_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
