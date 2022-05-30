@@ -1,5 +1,5 @@
 from tkinter import *
-FONT = ("Calibri", 12, "bold")
+FONT = ("Calibre", 12, "normal")
 # ---------------------PASSWORD GENERATOR ----------------
 
 
