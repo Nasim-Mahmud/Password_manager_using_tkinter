@@ -43,8 +43,12 @@ password_entry = Entry()
 password_entry.config(width=33)
 password_entry.grid(row=3, column=1)
 
-password_gen = Button()
-password_gen.config(text="Generate Password", font=FONT, height=1)
-password_gen.grid(row=3, column=2)
+password_gen_button = Button()
+password_gen_button.config(text="Generate Password", font=FONT, height=1)
+password_gen_button.grid(row=3, column=2)
+
+add_button = Button()
+add_button.config(text="Generate Password", font=FONT, height=1, width=35)
+add_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
