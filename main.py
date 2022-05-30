@@ -14,7 +14,7 @@ window.config(padx=40, pady=20)
 
 canvas = Canvas(height=200, width=200, highlightthickness=0)
 lock_image = PhotoImage(file="logo.png")
-canvas.create_image(100, 100, image=lock_image)
+canvas.create_image(130, 100, image=lock_image)
 canvas.grid(row=0, column=1, pady=20)
 
 # ------------------------FORM------------------------------
