@@ -1,4 +1,5 @@
 from tkinter import *
+
 FONT = ("Calibre", 12, "normal")
 # ---------------------PASSWORD GENERATOR ----------------
 
@@ -9,12 +10,12 @@ FONT = ("Calibre", 12, "normal")
 # ---------------------UI SETUP --------------------------
 window = Tk()
 window.title("Password Manager")
-window.config(padx=20, pady=20)
+window.config(padx=40, pady=20)
 
 canvas = Canvas(height=200, width=200, highlightthickness=0)
 lock_image = PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=lock_image)
-canvas.grid(row=0, column=1, pady=20, padx=40)
+canvas.grid(row=0, column=1, pady=20)
 
 # ------------------------FORM------------------------------
 web_name = Label()
@@ -35,12 +36,6 @@ email_entry.grid(row=2, column=1, columnspan=2)
 
 password_gen = Button()
 password_gen.config(text="Generate Password", font=FONT)
-password_gen.grid(row=3, column= 2)
-
-
-
-
-
-
+password_gen.grid(row=3, column=2)
 
 window.mainloop()
