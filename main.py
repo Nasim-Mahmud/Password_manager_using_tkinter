@@ -45,7 +45,7 @@ password_entry.grid(row=3, column=1, pady=5)
 
 password_gen_button = Button()
 password_gen_button.config(text="Generate Password", font=FONT, height=1)
-password_gen_button.grid(row=3, column=2,pady=5)
+password_gen_button.grid(row=3, column=2, pady=5)
 
 add_button = Button()
 add_button.config(text="Add", font=FONT, height=1, width=43)
