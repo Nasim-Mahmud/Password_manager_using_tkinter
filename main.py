@@ -18,12 +18,12 @@ canvas.grid(row=0, column=1)
 
 # ------------------------FORM------------------------------
 web_name = Label()
-web_name.config(text="Website", font=FONT)
+web_name.config(text="Website:", font=FONT)
 web_name.grid(row=1, column=0)
 
 web_entry = Entry()
-web_entry.config(width=35)
-web_entry.grid(row=1, column=0, columnspan=2)
+web_entry.config(width=50)
+web_entry.grid(row=1, column=1, columnspan=2)
 
 password_gen = Button()
 password_gen.config(text="Generate Password", font=FONT)
