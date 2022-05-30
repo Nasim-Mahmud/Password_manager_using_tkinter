@@ -1,6 +1,7 @@
 from tkinter import *
 
 FONT = ("Calibre", 12, "normal")
+
 # ---------------------PASSWORD GENERATOR ----------------
 
 
@@ -33,6 +34,14 @@ email_name.grid(row=2, column=0)
 email_entry = Entry()
 email_entry.config(width=58)
 email_entry.grid(row=2, column=1, columnspan=2)
+
+password_name = Label()
+password_name.config(text="Password:", font=FONT)
+password_name.grid(row=3, column=0)
+
+password_entry = Entry()
+password_entry.config(width=33)
+password_entry.grid(row=3, column=1)
 
 password_gen = Button()
 password_gen.config(text="Generate Password", font=FONT, height=1)
