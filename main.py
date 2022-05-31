@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 FONT = ("Calibre", 10, "normal")
 
@@ -8,10 +9,16 @@ FONT = ("Calibre", 10, "normal")
 
 # ---------------------SAVE PASSWORD----------------------
 def save():
+    web_details = web_entry.get()
+    email_details = email_entry.get()
+    password_details = password_entry.get()
+
+    messagebox.askokcancel(title=f"{web_details}", message=f"These are the info entered:"
+                                                f"\nEmail: {email_details}"
+                                                f"\nPassword: {password_details}"
+                                                f"\nIs it ok to save?")
+
     with open("text.txt", "a") as data:
-        web_details = web_entry.get()
-        email_details = email_entry.get()
-        password_details = password_entry.get()
         data.write(f"{web_details} | {email_details} | {password_details} \n")
         web_entry.delete(0, END)
         # email_entry.delete(0, END)
