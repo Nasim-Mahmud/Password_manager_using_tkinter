@@ -25,8 +25,8 @@ web_name.grid(row=1, column=0)
 
 web_entry = Entry()
 web_entry.config(width=58)
-web_entry.focus()
 web_entry.grid(row=1, column=1, columnspan=2, pady=5)
+web_entry.focus()
 
 email_name = Label()
 email_name.config(text="Email/Username:", font=FONT)
@@ -35,6 +35,7 @@ email_name.grid(row=2, column=0)
 email_entry = Entry()
 email_entry.config(width=58)
 email_entry.grid(row=2, column=1, columnspan=2, pady=5)
+email_entry.insert(0, "@gmail.com")
 
 password_name = Label()
 password_name.config(text="Password:", font=FONT)
