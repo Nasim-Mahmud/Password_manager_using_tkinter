@@ -30,13 +30,9 @@ def generate_password():
 
     password = "".join(password_list)
 
-    # password = ""
-    # for char in password_list:
-    #     password += char
-
-    # print(f"Your password is: {password}")
-    password_entry.insert(0, password)
-    pyperclip.copy(password)
+    password_entry.delete(0, END)  # Clears the entry
+    password_entry.insert(0, password)  # Shows random pass into the entry
+    pyperclip.copy(password)  # Copies the random pass into clipboard
 
 
 # ---------------------SAVE PASSWORD----------------------
