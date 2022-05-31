@@ -14,7 +14,7 @@ def save():
         password_details = password_entry.get()
         data.write(f"{web_details} | {email_details} | {password_details} \n")
         web_entry.delete(0, END)
-        email_entry.delete(0, END)
+        # email_entry.delete(0, END)
         password_entry.delete(0, END)
 
 
