@@ -6,6 +6,13 @@ FONT = ("Calibre", 10, "normal")
 
 
 # ---------------------SAVE PASSWORD----------------------
+def save():
+    with open("text.txt", "a") as data:
+        web_details = web_entry.get()
+        email_details = email_entry.get()
+        password_details = password_entry.get()
+        data.write(f"{web_details} | {email_details} | {password_details} \n")
+
 
 
 # ---------------------UI SETUP --------------------------
@@ -50,7 +57,7 @@ password_gen_button.config(text="Generate Password", font=FONT, height=1)
 password_gen_button.grid(row=3, column=2, pady=5)
 
 add_button = Button()
-add_button.config(text="Add", font=FONT, height=1, width=43)
+add_button.config(text="Add", font=FONT, height=1, width=43, command=save)
 add_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
