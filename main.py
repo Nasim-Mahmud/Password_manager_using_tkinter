@@ -55,7 +55,6 @@ def save():
                 # email_entry.delete(0, END)
                 password_entry.delete(0, END)
 
-
 # ---------------------UI SETUP --------------------------
 window = Tk()
 window.title("Password Manager")
