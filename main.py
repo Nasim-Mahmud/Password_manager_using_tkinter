@@ -56,19 +56,21 @@ def save():
                 # Reading the json data
                 data = json.load(data_file)
 
-
         except FileNotFoundError:
             with open("data.json", "w") as data_file:
                 json.dump(new_data, data_file, indent=4)
+
         else:
             # Updating the data
             data.update(new_data)
             with open("data.json", "w") as data_file:
                 # Writing the data into existing data
                 json.dump(data, data_file, indent=4)
+
         finally:
             web_entry.delete(0, END)
             password_entry.delete(0, END)
+
         # is_ok = messagebox.askokcancel(title=f"{web_details}", message=f"These are the info entered:"
         #                                                                f"\nEmail: {email_details}"
         #                                                                f"\nPassword: {password_details}"
