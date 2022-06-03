@@ -41,14 +41,19 @@ def save():
     web_details = web_entry.get()
     email_details = email_entry.get()
     password_details = password_entry.get()
+    new_data = {
+        web_details: {
+            "email": email_details,
+            "password": password_details,
+        }
+    }
 
     if len(web_details) == 0 or len(email_details) == 0 or len(password_details) == 0:
         messagebox.showerror(message="Please don't leave any field empty.")
     else:
-        with open("data.json", "w") as data:
-            data.write(f"{web_details} | {email_details} | {password_details} \n")
+        with open("data.json", "w") as data_file:
+            json.dump(new_data, data_file)
             web_entry.delete(0, END)
-            # email_entry.delete(0, END)
             password_entry.delete(0, END)
         # is_ok = messagebox.askokcancel(title=f"{web_details}", message=f"These are the info entered:"
         #                                                                f"\nEmail: {email_details}"
