@@ -44,16 +44,21 @@ def save():
     if len(web_details) == 0 or len(email_details) == 0 or len(password_details) == 0:
         messagebox.showerror(message="Please don't leave any field empty.")
     else:
-        # is_ok = messagebox.askokcancel(title=f"{web_details}", message=f"These are the info entered:"
-        #                                                                f"\nEmail: {email_details}"
-        #                                                                f"\nPassword: {password_details}"
-        #                                                                f"\nIs it ok to save?")
-        # if is_ok:
         with open("data.json", "w") as data:
             data.write(f"{web_details} | {email_details} | {password_details} \n")
             web_entry.delete(0, END)
             # email_entry.delete(0, END)
             password_entry.delete(0, END)
+        # is_ok = messagebox.askokcancel(title=f"{web_details}", message=f"These are the info entered:"
+        #                                                                f"\nEmail: {email_details}"
+        #                                                                f"\nPassword: {password_details}"
+        #                                                                f"\nIs it ok to save?")
+        # if is_ok:
+        #     with open("text.txt", "a") as data:
+        #         data.write(f"{web_details} | {email_details} | {password_details} \n")
+        #         web_entry.delete(0, END)
+        #         # email_entry.delete(0, END)
+        #         password_entry.delete(0, END)
 
 
 # ---------------------UI SETUP --------------------------
