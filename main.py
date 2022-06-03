@@ -89,7 +89,7 @@ def find_password():
         with open("data.json", "r") as data_file:
             # Reading the json data
             data = json.load(data_file)
-    except:
+    except FileNotFoundError:
         messagebox.showerror(title="404!", message="The data file doesn't exist.")
     else:
         web_details = web_entry.get()
