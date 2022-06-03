@@ -52,9 +52,12 @@ def save():
         messagebox.showerror(message="Please don't leave any field empty.")
     else:
         with open("data.json", "r") as data_file:
+            # Reading the json data
             data = json.load(data_file)
+            # Updating the data
             data.update(new_data)
         with open("data.json", "w") as data_file:
+            # Writing the data into existing data
             json.dump(data, data_file, indent=4)
 
             web_entry.delete(0, END)
