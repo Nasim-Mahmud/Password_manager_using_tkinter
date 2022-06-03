@@ -49,7 +49,7 @@ def save():
         #                                                                f"\nPassword: {password_details}"
         #                                                                f"\nIs it ok to save?")
         # if is_ok:
-        with open("text.txt", "a") as data:
+        with open("data.json", "w") as data:
             data.write(f"{web_details} | {email_details} | {password_details} \n")
             web_entry.delete(0, END)
             # email_entry.delete(0, END)
