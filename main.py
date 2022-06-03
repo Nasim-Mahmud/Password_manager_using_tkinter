@@ -83,6 +83,10 @@ def save():
         #         password_entry.delete(0, END)
 
 
+# ---------------------SEARCH PASSWORD --------------------------
+
+
+
 # ---------------------UI SETUP --------------------------
 window = Tk()
 window.title("Password Manager")
