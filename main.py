@@ -92,6 +92,9 @@ def find_password():
         if web_details in data:
             messagebox.showinfo(title=f"{web_details}", message=f"Email: {data[f'{web_details}']['email']}\n"
                                                                 f"Password: {data[f'{web_details}']['password']}")
+        else:
+            messagebox.showerror(title="Error", message="No details for the website exists")
+
 
 # ------------------------UI SETUP -------------------------------
 window = Tk()
