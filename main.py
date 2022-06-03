@@ -85,10 +85,14 @@ def save():
 
 # ---------------------SEARCH PASSWORD --------------------------
 def find_password():
-    with open("data.json", "r") as data_file:
+    try:
+        with open("data.json", "r") as data_file:
+            # Reading the json data
+            data = json.load(data_file)
+    except:
+        messagebox.showerror(title="404!", message="The data file doesn't exist.")
+    else:
         web_details = web_entry.get()
-        # Reading the json data
-        data = json.load(data_file)
         if web_details in data:
             messagebox.showinfo(title=f"{web_details}", message=f"Email: {data[f'{web_details}']['email']}\n"
                                                                 f"Password: {data[f'{web_details}']['password']}")
@@ -138,7 +142,7 @@ password_gen_button.config(text="Generate Password", font=FONT, height=1, comman
 password_gen_button.grid(row=3, column=2, pady=5)
 
 search_button = Button()
-search_button.config(text="Search", font=FONT, height=1,width=15, command=find_password)
+search_button.config(text="Search", font=FONT, height=1, width=15, command=find_password)
 search_button.grid(row=1, column=2, pady=5)
 
 add_button = Button()
