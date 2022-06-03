@@ -103,8 +103,8 @@ web_name.config(text="Website:", font=FONT)
 web_name.grid(row=1, column=0)
 
 web_entry = Entry()
-web_entry.config(width=58)
-web_entry.grid(row=1, column=1, columnspan=2, pady=5)
+web_entry.config(width=37)
+web_entry.grid(row=1, column=1, pady=5)
 web_entry.focus()
 
 email_name = Label()
@@ -127,6 +127,10 @@ password_entry.grid(row=3, column=1, pady=5)
 password_gen_button = Button()
 password_gen_button.config(text="Generate Password", font=FONT, height=1, command=generate_password)
 password_gen_button.grid(row=3, column=2, pady=5)
+
+search_button = Button()
+search_button.config(text="Search", font=FONT, height=1,width=15)
+search_button.grid(row=1, column=2, pady=5)
 
 add_button = Button()
 add_button.config(text="Add", font=FONT, height=1, width=43, command=save)
