@@ -9,5 +9,12 @@ Created a Password Manager as a project work while learning python from [100 Day
 
 **NB: This program is still in developing phase.**
 
+## Update
+
+In this update, I have added a better way to store our password, which is in json format. There is a **Search** button, which can search for a websites password after storing it into the database. No need to look inside the json file to search for a particular webs password anymore.
+
+![ss](https://user-images.githubusercontent.com/57942968/171852109-99fae903-f828-4a5a-ba15-4a370806047f.png)
+
+
 
 **Happy Coding!**
