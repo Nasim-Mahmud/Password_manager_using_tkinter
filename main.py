@@ -51,14 +51,19 @@ def save():
     if len(web_details) == 0 or len(email_details) == 0 or len(password_details) == 0:
         messagebox.showerror(message="Please don't leave any field empty.")
     else:
-        with open("data.json", "r") as data_file:
-            # Reading the json data
-            data = json.load(data_file)
-            # Updating the data
-            data.update(new_data)
-        with open("data.json", "w") as data_file:
-            # Writing the data into existing data
-            json.dump(data, data_file, indent=4)
+        try:
+            with open("data.json", "r") as data_file:
+                # Reading the json data
+                data = json.load(data_file)
+                # Updating the data
+                data.update(new_data)
+        except:
+            with open("data.json", "w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+        else:
+            with open("data.json", "w") as data_file:
+                # Writing the data into existing data
+                json.dump(data, data_file, indent=4)
 
             web_entry.delete(0, END)
             password_entry.delete(0, END)
