@@ -52,7 +52,7 @@ def save():
         messagebox.showerror(message="Please don't leave any field empty.")
     else:
         with open("data.json", "w") as data_file:
-            json.dump(new_data, data_file)
+            json.dump(new_data, data_file, indent=4)
             web_entry.delete(0, END)
             password_entry.delete(0, END)
         # is_ok = messagebox.askokcancel(title=f"{web_details}", message=f"These are the info entered:"
